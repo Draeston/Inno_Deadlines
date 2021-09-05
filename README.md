@@ -11,3 +11,25 @@ Backend - the "back", server side of the project, that contains logic to perform
 Assignment - unit, that contains task, related important professor's or TA's comments, discussion, links and status
 
 Course admin - representative or responsible person, who can add assignments to the group, add important information related to the assignment
+
+# Used technologies
+* Frontend
+    + Vue.js
+    + Nuxt.js
+    + JavaScript
+    + HTML
+    + CSS
+    + SASS
+* Backend
+    + Kotlin
+    + Spring
+    + PostgreSQL
+
+# Collaborators
+Nikita Morozov
+
+Azat Bariev
+
+B19-SD-02, 
+
+Innopolis University
