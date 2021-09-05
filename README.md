@@ -6,4 +6,8 @@ So, we decided to create the project which will help, we hope, other Innopolis s
 # Glossary
 Frontend - the "front", client side of the project; user interface, transformed data from server are there
 
-Backend - the "back", server side of the project, that contains 
+Backend - the "back", server side of the project, that contains logic to perform user's requests
+
+Assignment - unit, that contains task, related important professor's or TA's comments, discussion, links and status
+
+Course admin - representative or responsible person, who can add assignments to the group, add important information related to the assignment
