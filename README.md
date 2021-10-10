@@ -146,8 +146,12 @@ Backend
 ## Dynamic View
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/dynamic.drawio.svg">
 
+## Deploy diagram
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/main/docs/deploy.svg">
+
 # Database structure
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/ERD.png">
+
 
 
 
