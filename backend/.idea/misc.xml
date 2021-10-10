@@ -8,4 +8,5 @@
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Kotlin SDK" project-jdk-type="KotlinSDK" />
 </project>

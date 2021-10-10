@@ -5,24 +5,26 @@
         <v-tab class="main-logo">InnoDeadlines</v-tab>
       </router-link>
       <v-spacer></v-spacer>
-      <router-link to="/add" style="color: black"><v-tab>Add</v-tab></router-link>
-      <v-tab>Logout</v-tab>
+      <router-link to="/add" style="color: black " v-show="this.$store.state.role === 'admin'">
+        <v-tab>Add</v-tab>
+      </router-link>
+      <v-tab @click="logout">Logout</v-tab>
     </v-app-bar>
     <div class="options-list">
       <div class="options-name">Subject</div>
-      <div class="options-text">LMAO</div>
+      <div class="options-text">{{ this.$store.state.currentElement.subject }}</div>
       <div class="options-name">Assignment</div>
-      <div class="options-text">Cringe</div>
+      <div class="options-text">{{ this.$store.state.currentElement.name }}</div>
       <div class="options-name">Link</div>
-      <div class="options-text"><a href="" class="options-link">Moodle</a></div>
+      <div class="options-text"><a id="a" class="options-link">Moodle</a></div>
       <div class="options-name">Group</div>
-      <div class="options-text">B19-SD-02</div>
+      <div class="options-text">{{ this.$store.state.currentElement.group }}</div>
     </div>
     <div class="comments-container">
       <div class="comments-list">
         <div class="comments-item" v-for="msg in newMessages" :key="msg">{{ msg }}</div>
       </div>
-      <div class="submit-container">
+      <div class="submit-container" v-show="this.$store.state.role === 'admin'">
         <textarea v-model="message" placeholder="Enter the message" id="text"></textarea>
         <button class="submit-button" @click="submitMessage">Send</button>
       </div>
@@ -31,20 +33,37 @@
 </template>
 
 <script>
+import { logoout } from '../auth/auth'
+
 export default {
   data: () => ({
-    message: '',
-    messages: ['Lmao', 'Cringe', 'XD', 'LMAO']
+    message: ''
   }),
   methods: {
-    submitMessage: function () {
-      this.messages.push(this.message)
+    submitMessage: async function () {
+      const response = await fetch('/comment', {
+        method: 'POST',
+        body: {
+          message: this.message,
+          id: this.$store.state.currentElement.id
+        }
+      })
+      response.json()
+      this.$store.state.currentElement.comments.push(this.message)
       this.message = ''
+    },
+    logout: function () {
+      if (logoout()) {
+        this.$router.push('/signin')
+      }
     }
+  },
+  mounted: function () {
+    document.getElementById('a').href = this.$store.state.currentElement.link
   },
   computed: {
     newMessages: function () {
-      return this.messages
+      return this.$store.state.currentElement.comments
     }
   }
 }

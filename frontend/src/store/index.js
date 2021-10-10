@@ -5,7 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    isLogged: false
+    isLogged: localStorage.getItem('authToken') !== null,
+    groups: [],
+    currentElement: null,
+    assignments: [],
+    role: 'user'
   },
   mutations: {
   },

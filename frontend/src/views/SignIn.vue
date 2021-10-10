@@ -2,8 +2,8 @@
   <div class="login-container">
     <h1>Sign In</h1>
     <form @submit.prevent="clickLogin">
-      <input type="text" placeholder="E-mail">
-      <input type="password" placeholder="Password">
+      <input type="text" placeholder="E-mail" v-model="email">
+      <input type="password" placeholder="Password" v-model="pass">
       <div class="centered">
         <label class="label-pass">Forgot password?</label>
         <router-link to="/signup"><label class="label-sign">Sign Up</label></router-link>
@@ -14,11 +14,24 @@
 </template>
 
 <script>
+import { login } from '../auth/auth'
+
 export default {
+  data: function () {
+    return {
+      email: '',
+      pass: ''
+    }
+  },
   methods: {
     clickLogin: function () {
-      this.$store.state.isLogged = true
-      this.$router.push('/')
+      if (login({
+        email: this.email,
+        password: this.pass
+      })) {
+        this.$store.state.isLogged = true
+        this.$router.push('/')
+      }
     }
   }
 }

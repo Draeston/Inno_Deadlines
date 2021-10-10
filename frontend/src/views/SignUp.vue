@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { register } from '../auth/auth'
+
 export default {
   data: function () {
     return {
@@ -26,7 +28,14 @@ export default {
   },
   methods: {
     clickSignUp: function () {
-      if (this.pass === this.repeatPass && this.pass.length >= 8) this.$router.push('/')
+      if (this.pass === this.repeatPass && this.pass.length >= 8) {
+        if (register({
+          email: this.email,
+          password: this.pass
+        })) {
+          this.$router.push('/signin')
+        }
+      }
     }
   }
 }
