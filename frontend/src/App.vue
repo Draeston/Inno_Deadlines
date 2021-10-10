@@ -4,8 +4,11 @@
 
 <script>
 export default {
-  created: function () {
-    this.$store.state.isLogged = localStorage.getItem('authToken') !== null && localStorage.getItem('authToken') !== undefined
+  created: async function () {
+    const response = await fetch('/groups')
+    this.$store.state.groups = await response.json()
+    const res = await fetch('/assignments')
+    this.$store.state.assignments = await res.json()
   }
 }
 </script>

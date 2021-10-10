@@ -22,7 +22,7 @@ const routes = [
     component: () => import('../views/SignUp.vue')
   },
   {
-    path: '/assignment/:assignmentId',
+    path: '/assignment',
     name: 'Assignment',
     component: () => import('../views/Assignment.vue')
   },
