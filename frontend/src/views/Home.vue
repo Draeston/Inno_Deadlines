@@ -50,18 +50,7 @@ export default {
 
 <style src="../../node_modules/vue-select/dist/vue-select.css"></style>
 <style lang="scss" scoped>
-
-.main-logo {
-  text-transform: none;
-  font-family: 'Oswald', sans-serif;
-  font-size: 44px;
-  color: white;
-}
-
-.main-app-bar {
-  background: rgb(13, 156, 34);
-  background: linear-gradient(90deg, rgba(13, 156, 34, 0.44947485830269607) 0%, rgba(72, 194, 118, 0.37664572665003504) 66%);
-}
+@import url('../assets/styles/navbar.scss');
 
 .main-container {
   text-align: center;

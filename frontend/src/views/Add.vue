@@ -35,7 +35,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+@import url('../assets/styles/navbar.scss');
 form {
   margin: 0 auto;
   width: 80%;
@@ -72,18 +73,6 @@ input[type='submit'] {
 
 input[type='submit']:hover {
   background: deepskyblue;
-}
-
-.main-logo {
-  text-transform: none;
-  font-family: 'Oswald', sans-serif;
-  font-size: 44px;
-  color: white;
-}
-
-.main-app-bar {
-  background: rgb(13, 156, 34);
-  background: linear-gradient(90deg, rgba(13, 156, 34, 0.44947485830269607) 0%, rgba(72, 194, 118, 0.37664572665003504) 66%);
 }
 
 .add-container {
