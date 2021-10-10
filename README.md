@@ -107,4 +107,5 @@ Class Diagrams
 There is no classes, except Vue class, in frontend part, so that there is quite impossible to construct Class UML Diagram for frontend.
 
 Component Diagram
+Frontend
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/dep-front.PNG">
