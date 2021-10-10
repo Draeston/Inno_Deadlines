@@ -1,0 +1,61 @@
+input[type='submit'] {
+  background: cornflowerblue;
+  border-radius: 30px;
+  color: azure;
+  padding: 10px 40px 10px 40px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 6px 3px 4px #68A1D3;
+}
+
+input[type='submit']:hover {
+  background: deepskyblue;
+}
+
+input {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+input[type='text'], input[type='password'] {
+  border: 2px solid cornflowerblue;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 24px;
+  width: 60%;
+}
+
+.centered {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h1 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.label-pass {
+  margin-right: 20px;
+}
+
+label {
+  color: gray;
+  user-select: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+label:hover {
+  text-decoration: underline;
+}
