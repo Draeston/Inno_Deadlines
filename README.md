@@ -102,6 +102,18 @@ Azat Bariev - Backend Developer
     + Singleton
       + In many cases, it's an anti-pattern, actually. But I used it for creating a store for all components of my application, so that I can easily share all important data and safety perform any changes on it. And I think, it can be used for such purposes.
 
+* Backend
+    + Singleton Pattern
+        + The singleton pattern is a mechanism that ensures only one instance of an object exists per application. This pattern can be useful when managing shared resources or             providing cross-cutting services, such as logging.
+    + Factory Method Pattern
+        + The factory method pattern entails a factory class with an abstract method for creating the desired object.
+    + Proxy Pattern
+        + The proxy pattern is a technique that allows one object — the proxy — to control access to another object — the subject or service.
+    + Template Method Pattern
+        + The template method pattern is a technique that defines the steps required for some action, implementing the boilerplate steps, and leaving the customizable steps as             abstract.
+
+The descriptions of patterns taken from https://www.baeldung.com/spring-framework-design-patterns
+
 # UML Diagrams
 Class Diagrams
 
