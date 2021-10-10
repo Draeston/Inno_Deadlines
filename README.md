@@ -123,3 +123,33 @@ Component Diagram
 
 Frontend
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/dep-front.PNG">
+
+Backend
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/uml.svg">
+
+# SOLID Usage
+
+Backend
+
+* We tried to make every entity responsible for only one purpose
+* It is easy to expand, but it is not defined to modify
+* There is not mush inherited classes, so LSP is maintained
+* All interfaces have only one purpose
+* DIP is also maintained
+
+# Static and Dynamic View diagrams
+
+Backend
+## Static View
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/Static%view.svg">
+
+## Dynamic View
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/dynamic.drawio.svg">
+
+# Database structure
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/ERD.png">
+
+
+
+
+
