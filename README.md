@@ -141,7 +141,7 @@ Backend
 
 Backend
 ## Static View
-<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/Static%view.svg">
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/Static%20view.png">
 
 ## Dynamic View
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/dynamic.drawio.svg">
