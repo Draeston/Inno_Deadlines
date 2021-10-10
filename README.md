@@ -147,7 +147,7 @@ Backend
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/Static%20view.png">
 
 ## Dynamic View
-<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/dynamic.png">
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/main/docs/dynamic.png">
 
 ## Deploy diagram
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/main/docs/deploy.svg">
