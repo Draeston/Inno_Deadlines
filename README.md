@@ -155,6 +155,8 @@ Backend
 # Database structure
 <img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/dev/docs/ERD.png">
 
+# Linter
+<img style="max-width: 500px" src="https://github.com/Draeston/Inno_Deadlines/blob/main/docs/linter.png">
 
 
 
