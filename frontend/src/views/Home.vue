@@ -5,30 +5,16 @@
         <v-tab class="main-logo">InnoDeadlines</v-tab>
       </router-link>
       <v-spacer></v-spacer>
-      <vSelect :options="items" :clearable="false" v-model="group" style="min-width: 150px"></vSelect>
-      <router-link to="/add" style="color: black"><v-tab>Add</v-tab></router-link>
-      <v-tab>Logout</v-tab>
+      <vSelect :options="this.$store.state.groups" :clearable="false" v-model="group" style="min-width: 150px"></vSelect>
+      <router-link to="/add" style="color: black" v-show="this.$store.state.role === 'admin'"><v-tab>Add</v-tab></router-link>
+      <v-tab @click="logout">Logout</v-tab>
     </v-app-bar>
     <div class="main-container">
-        <router-link to="/assignment/1" tag="div" class="assignment-item">
-          <h1>Title</h1>
+        <div @click="goTo(assign)" class="assignment-item" v-for="assign in selectedAssignment" :key="assign.name" style="text-align: left">
+          <h1>{{ assign.name }}</h1>
           <img src="../assets/images/sample.jpg" alt="img">
-          <p class="assignment-deadline">19 December 2021</p>
-      </router-link>
-      <div class="assignment-item">
-        <h1>Title</h1>
-        <img src="../assets/images/sample.jpg" alt="img">
-        <p class="assignment-deadline">19 December 2021</p>
-      </div>
-      <div class="assignment-item">
-        <h1>Title</h1>
-        <img src="../assets/images/sample.jpg" alt="img">
-        <p class="assignment-deadline">19 December 2021</p>
-      </div>
-      <div class="assignment-item">
-        <h1>Title</h1>
-        <img src="../assets/images/sample.jpg" alt="img">
-        <p class="assignment-deadline">19 December 2021</p>
+          <p class="assignment-deadline">{{ assign.subject }}</p>
+          <p class="assignment-deadline">{{ assign.deadline }}</p>
       </div>
     </div>
   </div>
@@ -36,14 +22,39 @@
 
 <script>
 import vSelect from 'vue-select'
+import { logoout } from '../auth/auth'
 
 export default {
   data: () => ({
-    items: ['Foo', 'Bar', 'Fizz', 'Buzz', 'SD-02_b19_LMAO'],
-    group: 'Foo'
+    group: ''
   }),
   components: {
     vSelect
+  },
+  created: async function () {
+    this.group = this.$store.state.groups[0]
+  },
+  methods: {
+    goTo: function (element) {
+      this.$store.state.currentElement = element
+      this.$router.push('/assignment')
+    },
+    logout: function () {
+      if (logoout()) {
+        this.$router.push('/signin')
+      }
+    }
+  },
+  computed: {
+    selectedAssignment: function () {
+      const newAssigns = []
+      this.$store.state.assignments.forEach(element => {
+        if (this.group === element.group) {
+          newAssigns.push(element)
+        }
+      })
+      return newAssigns
+    }
   }
 }
 </script>
